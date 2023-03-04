@@ -2,7 +2,7 @@
     
     authors: Koshar Akay (koshakarai) 
              ... Egor (FaVaku)
-             ... Saveliy (...)
+             ... Saveliy (Save1iy2)
 """
 
 import asyncio
@@ -18,9 +18,9 @@ app = FastAPI()
 
 def get_application() -> FastAPI:
     application = FastAPI(
-        title=settings.PROJECT_NAME, 
-        debug=settings.DEBUG, 
-        version=settings.VERSION,
+        title=config.PROJECT_NAME,
+        version=config.VERSION,
+        debug=config.DEBUG, 
     )
 
     @application.on_event("startup")

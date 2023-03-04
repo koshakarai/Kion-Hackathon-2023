@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 """ Application meddlewares 
 
    nothing meddleware yet :(

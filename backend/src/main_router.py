@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 """ Application main router """
 
 async def setup_routes(application) -> None:
@@ -13,4 +12,6 @@ async def setup_routes(application) -> None:
     # application.include_router(v1_router, prefix='v1', tags=['v1']) | Example
     # application.include_router(v2_router, prefix='v2', tags=['v2']) |
 
-    ...
+    from example.router import router as examle_router
+    
+    application.include_router(examle_router, tags=['temporary'])
