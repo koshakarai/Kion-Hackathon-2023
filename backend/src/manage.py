@@ -5,8 +5,14 @@
 """
 
 import sys
-import uvicorn
+
+import typing
 import colorama
+
+import uvicorn
+
+import config
+
 
 try:
     from asgi import app
@@ -14,13 +20,20 @@ except ImportError as exc:
     raise ImportError("Couldn't import FastApi Instance.")
 
 
-def execute(options):
-    host = "127.0.0.1"
-    port = 80
-    uvicorn.run("manage:app", host=host, port=port, reload=True)
+def start(options: typing.List[str]) -> None:
+    """ Start fastapi on uvicorn asgi web server
+
+    Args:
+        options (typing.List[str]): a list containing the host and port. Implicit default ["127.0.0.1", "80"]
+    """    
+    
+    host, port = options if options else [ "127.0.0.1", "80" ]
+    port = int(port)
+    
+    uvicorn.run("manage:app", host=host, port=port, reload=config.RELOAD)
 
 action_map = {
-    "start": execute,
+    "start": start,
 }
 
 if __name__ == "__main__":
@@ -29,8 +42,7 @@ if __name__ == "__main__":
     args = sys.argv[1:]
     action = args[0]
     options = args[1:]
-    print(args, action, options) # delete after tests
-    
+
     try:
         action_map[action](options)
     except Exception as exc:
