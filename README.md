@@ -6,6 +6,9 @@
 <link rel="stylesheet" type="text/css" href="readme.css"> 
 </head>
 <body> 
-<p>Kion project for MTS hackathon 2023</p>
+<article>
+ <h1>Kion project</h1>
+<p>for MTS hackathon 2023</p>
+</article>
 </body>
 </html>
