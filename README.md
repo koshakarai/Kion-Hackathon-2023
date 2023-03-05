@@ -1,14 +1,3 @@
-
-<!DOCTYPE html> 
-<html>
-<head> 
-<meta charset="UTF-8"> 
-<link rel="stylesheet" type="text/css" href="readme.css"> 
-</head>
-<body> 
-<article>
- <h1>Kion project</h1>
-<p>for MTS hackathon 2023</p>
-</article>
-</body>
-</html>
+<h1 align="center">Hi there</a> 
+<img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
+<h3 align="center">We provide a project for a hackathon from MTS</h3>
