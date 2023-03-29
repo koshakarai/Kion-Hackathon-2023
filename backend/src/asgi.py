@@ -1,8 +1,8 @@
 """ Asynchronous Server Gateway Interface
     
     authors: Koshar Akay (koshakarai) 
-             ... Egor (FaVaku)
-             ... Saveliy (Save1iy2)
+             Tsarkov Egor (FaVaku)
+             Semenochev Saveliy (Save1iy2)
 """
 
 import asyncio
@@ -13,19 +13,18 @@ import config
 from middlewares import setup_middlewares
 from main_router import setup_routes
 
-
-app = FastAPI()
-
 def get_application() -> FastAPI:
-    application = FastAPI(
+    application = FastAPI( 
         title=config.PROJECT_NAME,
         version=config.VERSION,
         debug=config.DEBUG, 
     )
-
+    
+    
+    setup_middlewares(application)  
+    
     @application.on_event("startup")
     async def handle_startup_events():
-        # await setup_middlewares(application) | Uncomment when middleware appears  
         await setup_routes(application)
 
     @application.on_event("shutdown")

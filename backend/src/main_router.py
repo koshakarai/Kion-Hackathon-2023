@@ -12,6 +12,10 @@ async def setup_routes(application) -> None:
     # application.include_router(v1_router, prefix='v1', tags=['v1']) | Example
     # application.include_router(v2_router, prefix='v2', tags=['v2']) |
 
-    from example.router import router as examle_router
+    from example.endpoints import router as examle_router
+    from yc.endpoints import router as ycservices_router
+    from ICG.endpoints import router as icg_router
     
     application.include_router(examle_router, tags=['temporary'])
+    application.include_router(ycservices_router)
+    application.include_router(icg_router)

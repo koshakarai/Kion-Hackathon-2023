@@ -16,12 +16,13 @@ Pipfile.lock
 env3.*
 env
 .env
+*.env
 docs_build
 venv
 .venv
 docs.zip
 archive.zip
-
+src/ICG/build_model
 # vim temporary files
 *~
 .*.sw?
