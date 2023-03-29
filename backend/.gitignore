@@ -23,6 +23,7 @@ venv
 docs.zip
 archive.zip
 src/ICG/build_model
+src/ICG/model
 # vim temporary files
 *~
 .*.sw?

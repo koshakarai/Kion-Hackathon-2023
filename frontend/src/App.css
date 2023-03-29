@@ -1,0 +1,456 @@
+body {
+    margin: 0px;
+}
+
+#overlay { /* we set all of the properties for our overlay */
+    height: 80%;
+    width: 80%;
+    margin: 0 auto;
+    color: black;
+    padding: 10px;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    z-index: 1000;
+    display: none;
+    /* CSS 3 */
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#mask { /* create are mask */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 500;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+/* use :target to look for a link to the overlay then we find our mask */
+#overlay:target, #overlay:target + #mask {
+    display: block;
+    opacity: 1;
+}
+
+.close { /* to make a nice looking pure CSS3 close button */
+    display: block;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    color: white;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    font-size: 35px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -o-border-radius: 40px;
+    border-radius: 40px;
+}
+
+#open-overlay { /* open the overlay */
+    padding: 10px 5px;
+    background: blue;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#third {
+    background: -webkit-linear-gradient(45deg, #ea8e5c,#e17bf3,#56a8e6);
+    background: linear-gradient(45deg, #ea8e5c,#e17bf3,#56a8e6);
+}
+
+.containerform {
+    width: 80%;
+}
+
+.content {
+    width: 60%;
+    position: absolute;
+    left: 16%;
+    top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #202020;
+    padding: 4vw;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+}
+
+.left {
+    width: 25%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+    .left::before {
+        content: "";
+        position: absolute;
+        height: 70%;
+        width: 0.1vw;
+        background: #afafb6;
+        right: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+.right {
+    width: 75%;
+    margin-left: 4vw;
+    text-align: center;
+}
+
+.details {
+    margin-bottom: 1vw;
+    text-align: center;
+}
+
+    .details i {
+        font-size: 2vw;
+        color: #3e2093;
+        margin-bottom: 0.3vw;
+    }
+
+.topic {
+    font-size: 1vw;
+    font-weight: 500;
+    margin-bottom: 0.3vw;
+    color: #d7d4dd;
+}
+
+.text-one,
+.text-two {
+    font-size: 0.9vw;
+    color: #d7d4dd;
+}
+
+.topic-text {
+    font-size: 2vw;
+    font-weight: 600;
+    color: #d7d4dd;
+    margin-bottom: 2vw;
+}
+
+.right p {
+    margin-bottom: 1vw;
+    font-size: 1vw;
+}
+
+.input-box {
+    height: 3vw;
+    width: 92%;
+    margin-bottom: 1vw;
+}
+
+.message-box {
+    height: 5vw;
+    width: 92%;
+    margin-bottom: 1vw;
+}
+
+.input-box input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 0.3vw;
+    background: #f0f1f8;
+    padding: 0 1vw;
+    font-size: 1vw;
+}
+
+.message-box textarea {
+    resize: none;
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 0.3vw;
+    background: #f0f1f8;
+    padding: 1vw;
+    font-size: 1vw;
+}
+
+.button {
+    color: #ffffff;
+    font-size: 1vw;
+    background: #3e2093;
+    outline: none;
+    border: none;
+    padding: 1vw 2vw;
+    border-radius: 0.2vw;
+    transition: 0.3s;
+    margin-top: 2vw;
+}
+
+    .button:hover {
+        background: #480789;
+    }
+
+body {
+    background: #5d5d5d;
+}
+
+p {
+    font-family: roboto;
+}
+
+#canter {
+    border-radius: 0px 0px 5px 5px;
+    background: #2d2d2d;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4px 7px 4px 15px;
+    margin: 0px;
+    height: 60vh;
+}
+
+#texta {
+    background: #2d2d2d;
+    color: white;
+    width: 99%;
+    height: 56vh;
+    border-color: transparent;
+    border-radius: 5px;
+    resize: none;
+    font-size: 20px;
+    outline: none;
+}
+
+#fol {
+    background: #2d2d2d;
+    border-radius: 0 10px 15px;
+    width: 160px;
+    height: 35px;
+}
+
+.folp {
+    color: white;
+}
+
+#navik {
+    background: #3c3c3c;
+    border-radius: 2px;
+    width: 80.89%;
+    height: 30px;
+    left: 19.3%;
+    position: relative;
+}
+
+#scene {
+    border-radius: 0px 0px 10px 0px;
+    background: #2d2d2d;
+    width: 27%;
+    height: 30px;
+    left: 19%;
+    position: relative;
+    left: -24%;
+}
+
+.folr {
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+}
+
+body {
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+/*===============================*/
+
+.col-1 {
+    height: 60vh;
+    width: 20%;
+    background: #353535;
+    border: 1px solid #333;
+    display: table-cell;
+    position: relative;
+}
+
+.col-2 {
+    height: 60vh;
+    width: 60%;
+    background: #2d2d2d;
+    border: 1px solid #333;
+    display: table-cell;
+    position: relative;
+}
+
+.row {
+    display: table;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.bot {
+    height: 40vh;
+    width: 100%;
+    background: #3c3c3c;
+    border: 1px solid #333;
+    padding: 0px;
+    margin: 0px;
+    /*=====================*/
+}
+
+.navbar {
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(62, 62, 62);
+    width: 100%;
+    display: flex;
+}
+
+    .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+    .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+        border-radius: 5px;
+        background-color: rgb(21, 21, 21);
+    }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #353535;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        float: none;
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        cursor: pointer;
+    }
+
+        .dropdown-content a:hover {
+            background-color: #2d2d2d;
+            cursor: pointer;
+        }
+
+    .dropdown-content input {
+        float: none;
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        cursor: pointer;
+    }
+
+        .dropdown-content input:hover {
+            background-color: #2d2d2d;
+            cursor: pointer;
+        }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+#Filopt {
+    height: 30px;
+    width: 100%;
+    background-color: rgb(62, 62, 62);
+    display: table;
+}
+/*=========================*/
+.Scen {
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+}
+
+.tab {
+    height: 30px;
+    width: 100%;
+    background-color: rgb(62, 62, 62);
+    display: table;
+    margin: 2px;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+    .tab:hover {
+        height: 40px;
+        background-color: #333;
+    }
+
+.radio {
+    display: none;
+}
+.tox-tinymce {
+    border: 2px solid #837a7a;
+    border-radius: 10px;
+}
+.tox .tox-statusbar__branding svg {
+    display: none;
+}
+.tox .tox-notification--warning {
+    display: none;
+}
+
+.tox:not(.tox-tinymce-inline) .tox-editor-header {
+    background-color: #2d2d2d;
+}
+textarea {
+    resize: none;
+}
